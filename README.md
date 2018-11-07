@@ -16,13 +16,17 @@ This will create an executable with the name `a.out`. The compiler flags enforce
 
 ### Variable declaration
 
-`int a;` or `char b[80]`. Here `int` and `char` are types whereas `a` and `b` are names of the declared variables. The `[80]` indicates that instead of a single `char` an array of `chars`s of size 80 is created. For each value we want to read or manipulate, we have to create a variable of an appropriate type. Often temporary/auxiliary variables are needed to carry out a comuptation.
+`int a;` or `char b[80]` 
+
+Here `int` and `char` are types whereas `a` and `b` are names of the declared variables. The `[80]` indicates that instead of a single `char` an array of `char`s of size 80 is created. For each value we want to read or manipulate, we have to create a variable of an appropriate type. Often temporary/auxiliary variables are needed to carry out a comuptation.
+
+Assignment to a variable is with `=`, e.g., `a = 5`.
 
 ### Reading and writing
 
 We print text or the content of some variable to the screen with the `printf` function. The first argument of `printf` is a *format string* that contains normal symbols and special symbol sequences starting with `%` where the content of some variable shall be printed. The symbols folling the `%` indicate for instance the type of the printed value. All other arguments of `printf` are variables (or values) that shall be printed. E.g.:
 - `printf("Hello!")` just outputs `Hello!`. 
-- `printf("%d + %d = %d, 2, 3, 5)` outputs `2 + 3 = 5`. The *i*th occurrence of `%d` (`d` for decimal) is replaced by the *i+1*th argument of `printf`. 
+- `printf("%d + %d = %d", 2, 3, 5)` outputs `2 + 3 = 5`. The *i*th occurrence of `%d` (`d` for decimal) is replaced by the *i+1*th argument of `printf`. 
 - For new lines include `\n` into the format string.
 - Other types: `%s` for strings (arrays of characters), `%f` for floating point values.
 
