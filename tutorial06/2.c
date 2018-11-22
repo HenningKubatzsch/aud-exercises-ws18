@@ -4,6 +4,8 @@
 typedef struct element *list;
 struct element { int value; list next; };
 
+#include "print_list.h"
+
 int sum(list l) {
 	if (l == NULL)
 		return 0;
@@ -40,5 +42,11 @@ void rmEvens(list* lp){
 }
 
 int main() {
+	list l = cons(1, cons(2, cons(3, cons(4, cons(5, NULL)))));
+	printf("List: "); printList(l);
+	printf("Sum (rec): %d\n", sum(l));  
+	printf("SUm (it): %d\n", sum_it(l));
+	rmEvens(&l);
+	printf("rmEvans: "); printList(l);
 	return 0;
 }
