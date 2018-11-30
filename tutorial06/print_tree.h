@@ -4,7 +4,7 @@
 // value, left, right
 
 tree mktree(int key, tree left, tree right) {
-  tree node = malloc(sizeof(node));
+  tree node = malloc(sizeof(*node));
   node->key = key;
   node->left = left;
   node->right = right;
